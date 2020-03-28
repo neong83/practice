@@ -2,6 +2,8 @@ import csv
 import logging
 from typing import List
 
+import settings
+
 LOGGER = logging.getLogger(__name__)
 
 
