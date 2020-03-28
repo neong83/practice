@@ -1,4 +1,4 @@
-# Practice  [img]https://travis-ci.org/neong83/practice.svg?branch=master[/img]
+# Practice  [![Build Status](https://travis-ci.org/neong83/practice.svg?branch=master)](https://travis-ci.org/neong83/practice)
 
 ## Description
 This is a practice repo for myself to learn couple key features
