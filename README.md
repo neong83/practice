@@ -1,4 +1,4 @@
-# Practice
+# Practice  [img]https://travis-ci.org/neong83/practice.svg?branch=master[/img]
 
 ## Description
 This is a practice repo for myself to learn couple key features
@@ -42,3 +42,8 @@ Full commands to run unit and coverage tests
 You can use the following alias to run unit and coverage tests
 1. `make test [FILE_NAME]` file name in this command is optional.  It will run test in a single file if `FILE_NAME` is given, otherwise, it will run through all tests in code base
 2. `make coverage` It will provide you code coverage for entire code base
+
+
+### Travis CI
+
+Life cycle reference: https://docs.travis-ci.com/user/job-lifecycle
