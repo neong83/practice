@@ -1,5 +1,8 @@
 import csv
+import logging
 from typing import List
+
+LOGGER = logging.getLogger(__name__)
 
 
 def read_csv_from_file(file_name: str) -> List[str]:
@@ -10,6 +13,6 @@ def read_csv_from_file(file_name: str) -> List[str]:
             for row in reader:
                 contents.append(row)
     except FileNotFoundError:
-        print(f"unable to find {file_name}")
+        LOGGER.warning(f"unable to find file in {file_name}")
 
     return contents
