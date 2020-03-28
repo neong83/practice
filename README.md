@@ -19,7 +19,7 @@ Build image prior to running this application with either one of the follow comm
 
 ### Run code
 
-Run `docker-compose run app` to execute code from docker
+Run `docker-compose run app` or `make run` to execute code from docker
 
 ## Contribution
 
