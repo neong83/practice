@@ -12,4 +12,4 @@ test:
 	docker-compose run app pytest tests/${argv}
 
 coverage:
-	docker-compose run app pytest --cov=tests tests/
+	docker-compose run app pytest --cov=. tests/
