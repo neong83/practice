@@ -11,7 +11,7 @@ def read_csv_from_file(file_name: str) -> List[str]:
         with open(file_name, newline="") as csvfile:
             reader = csv.reader(csvfile)
             for row in reader:
-                contents.append(row)
+                contents += row
     except FileNotFoundError:
         LOGGER.warning(f"unable to find file in {file_name}")
 
