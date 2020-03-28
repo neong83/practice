@@ -1,7 +1,10 @@
 # Practice
 
 ## Description
-This is a practice for myself to learn on how to break story into small tasks to provide incremental value for business 
+This is a practice repo for myself to learn couple key features
+1. how to break story into small tasks to provide incremental value for business
+2. how to build docker and setup test environment for continuous integration
+3. how to provide better introduction and PR standard in GitHub
 
 ## Trello link
 https://trello.com/b/wBaHaEPa/practices
