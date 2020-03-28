@@ -6,10 +6,10 @@ docker:
 	docker-compose build
 
 run:
-	docker-compose run app
+	docker-compose run --rm app
 
 test:
-	docker-compose run app pytest tests/${argv}
+	docker-compose run --rm app pytest tests/${argv}
 
 coverage:
-	docker-compose run app pytest --cov=. tests/
+	docker-compose run --rm app pytest --cov=. tests/
