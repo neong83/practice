@@ -1,0 +1,14 @@
+default_language_version:
+  python: python3
+repos:
+  - repo: https://github.com/timothycrosley/isort
+    rev: 4.3.21-2
+    hooks:
+      - id: isort
+        additional_dependencies: [toml]
+        files: src/
+  - repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+      - id: black
+        files: src/
