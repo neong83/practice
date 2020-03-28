@@ -8,4 +8,6 @@ FROM base as app
 WORKDIR /var/task
 COPY src /var/task/
 
+ENV PYTHONPATH "/var/task:${PYTHONPATH}"
+
 CMD ["python3", "run.py"]
