@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.7"
+install:
+  - pip3 install -r src/requirements.txt
+script:
+  - make test # run unit test
+  - make coverage # run coverage test
