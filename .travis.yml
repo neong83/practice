@@ -4,4 +4,5 @@ python:
 install:
   - pip3 install -r src/requirements.txt
 script:
-  - pytest
+  - make test # run unit test
+  - make coverage # run coverage test
