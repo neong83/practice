@@ -6,5 +6,5 @@ class FileType:
         return file_name.split(".")[-1]
 
     @classmethod
-    def is_csv_file(cls, file_name) -> bool:
+    def is_csv(cls, file_name) -> bool:
         return cls.__get_file_extension(file_name).lower() == cls.CSV

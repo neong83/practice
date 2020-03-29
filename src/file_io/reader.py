@@ -10,7 +10,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 def get_file_reader(file_name: str):
-    if FileType.is_csv_file(file_name):
+    if FileType.is_csv(file_name):
         return read_csv_file
     else:
         raise FileExtensionNotFoundException(f"Unable to read from '{file_name}")
