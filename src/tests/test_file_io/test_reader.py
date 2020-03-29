@@ -1,27 +1,25 @@
 from unittest.mock import mock_open, patch
 
 from file_io.exceptions import FileExtensionNotFoundException
-from file_io.reader import FileInputType, read_csv_file, read_from_file
+from file_io.reader import get_file_reader, read_csv_file, read_from_file
 from settings import CSV_DIR
 from tests.base import TestCase
 
 
-class FileInputTypeTestCase(TestCase):
+class ReaderTestCase(TestCase):
     def test_get_file_reader_with_csv_format(self):
         FILE_NAME = "test.csv"
-        self.assertEqual(FileInputType.get_file_reader(FILE_NAME), read_csv_file)
+        self.assertEqual(get_file_reader(FILE_NAME), read_csv_file)
 
     def test_get_file_reader_with_case_insensitive(self):
         FILE_NAME = "TEST.CSV"
-        self.assertEqual(FileInputType.get_file_reader(FILE_NAME), read_csv_file)
+        self.assertEqual(get_file_reader(FILE_NAME), read_csv_file)
 
     def test_get_file_reader_with_extension_not_found_exception(self):
         FILE_NAME = "test.json"
         with self.assertRaises(FileExtensionNotFoundException):
-            FileInputType.get_file_reader(FILE_NAME)
+            get_file_reader(FILE_NAME)
 
-
-class ReaderTestCase(TestCase):
     @patch(
         "builtins.open",
         new_callable=mock_open,
@@ -37,8 +35,6 @@ class ReaderTestCase(TestCase):
             self.assertEqual(contents, [])
         self.assertRegexIn("Unable to find file", cm.output)
 
-
-class ReadFromFileTestCase(TestCase):
     @patch("file_io.reader.read_csv_file")
     def test_read_from_file_with_csv_file(self, mock_read_csv_file):
         FILE_NAME = "test.csv"
