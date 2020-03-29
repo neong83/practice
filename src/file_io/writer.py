@@ -1,20 +1,17 @@
 import logging
-from enum import Enum
 
 import settings
 from file_io.exceptions import FileExtensionNotFoundException
+from file_io.models import BaseFileType
 
 LOGGER = logging.getLogger(__name__)
 
 
-class FileOutputType(Enum):
-    CSV = "csv"
-
+class FileOutputType(BaseFileType):
     @classmethod
-    def get_content_formatter(self, file_name: str):
-        file_extension = file_name.split(".")[-1]
-
-        if self.CSV.value == file_extension.lower():
+    def get_content_formatter(cls, file_name: str):
+        file_extension = cls.get_file_extension(file_name)
+        if cls.CSV == file_extension.lower():
             return csv_formatter
         else:
             raise FileExtensionNotFoundException(
@@ -23,7 +20,9 @@ class FileOutputType(Enum):
 
 
 def csv_formatter(contents):
-    return ",".join(map(str, contents))
+    if contents:
+        return ",".join(map(str, contents))
+    return ""
 
 
 def write_to_file(file_name: str, contents):

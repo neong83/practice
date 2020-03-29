@@ -30,6 +30,10 @@ class FormatterTestCase(TestCase):
         content = [1, 2, 3]
         self.assertEqual(csv_formatter(content), "1,2,3")
 
+    def test_csv_formatter_with_None(self):
+        content = None
+        self.assertEqual(csv_formatter(content), "")
+
 
 class WriteToFileTestCase(TestCase):
     @patch("builtins.open", new_callable=mock_open)
