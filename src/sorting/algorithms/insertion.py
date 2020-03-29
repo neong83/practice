@@ -1,4 +1,6 @@
-def get_insert_position_form_sorted_array(array, new_word, accident=False) -> int:
+def get_insert_position_form_sorted_array(
+    array, new_word, accident: bool = False
+) -> int:
     if not array:
         return 0
 

@@ -1,10 +1,11 @@
+from unittest.mock import patch
+
 from sorting.algorithms.insertion import (
     get_insert_position_form_sorted_array,
     search_insert_position_with_accident_sorted_array,
     search_insert_position_with_descending_sorted_array,
 )
 from tests.base import TestCase
-from unittest.mock import patch
 
 
 class InsertionTestCase(TestCase):
@@ -27,7 +28,7 @@ class InsertionTestCase(TestCase):
     @patch(
         "sorting.algorithms.insertion.search_insert_position_with_descending_sorted_array"
     )
-    def test_get_insert_position_from_sorted_array_with_accident_array(
+    def test_get_insert_position_from_sorted_array_with_descending_array(
         self, mock_search
     ):
         TEST_ARRAY = ["abc"]
