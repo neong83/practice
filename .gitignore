@@ -133,4 +133,4 @@ dmypy.json
 .test_scripts/
 
 # CSV
-csv/output.csv
+src/csv/output.csv
