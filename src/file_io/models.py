@@ -1,10 +1,17 @@
-class FileType:
+from enum import Enum
+
+
+class FileType(Enum):
     CSV = "csv"
+    UNSUPPORTED = "unsupported"
 
     @classmethod
-    def __get_file_extension(cls, file_name: str) -> str:
-        return file_name.split(".")[-1]
+    def get_type_for_file_name(cls, file_name):
+        if not file_name:
+            return cls.UNSUPPORTED
 
-    @classmethod
-    def is_csv(cls, file_name) -> bool:
-        return cls.__get_file_extension(file_name).lower() == cls.CSV
+        file_extension = file_name.split(".")[-1].lower()
+        if file_extension == cls.CSV.value:
+            return cls.CSV
+        else:
+            return cls.UNSUPPORTED
