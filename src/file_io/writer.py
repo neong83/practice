@@ -8,7 +8,8 @@ LOGGER = logging.getLogger(__name__)
 
 
 def get_content_formatter(file_name: str):
-    if FileType.is_csv(file_name):
+    file_type = FileType.get_type_for_file_name(file_name)
+    if file_type == FileType.CSV:
         return csv_formatter
     else:
         raise FileExtensionNotFoundException(

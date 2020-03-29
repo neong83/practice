@@ -9,7 +9,7 @@ run:
 	docker-compose run --rm app
 
 test:
-	docker-compose run --rm app pytest tests/${argv}
+	docker-compose run --rm app pytest tests/${args}
 
 coverage:
 	docker-compose run --rm app pytest --cov=. tests/

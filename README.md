@@ -35,12 +35,12 @@ Run `docker-compose run app` or `make run` to execute code from docker
 
 Full commands to run unit and coverage tests
 
-1. `docker-compose run app pytest [FILE_NAME]` Single unit test file 
-2. `docker-compose run app pytest [FOLDER_NAME]/` Multi unit tests in folder 
+1. `docker-compose run app pytest` Multi unit tests in `tests` folder 
+2. `docker-compose run app pytest args=[PATH_TO/FILE_NAME]` Single unit test file 
 3. `docker-compose run app pytest --cov=. [FOLDER_NAME]/` Coverage tests 
 
 You can use the following alias to run unit and coverage tests
-1. `make test [FILE_NAME]` file name in this command is optional.  It will run test in a single file if `FILE_NAME` is given, otherwise, it will run through all tests in code base
+1. `make test [args=PATH_TO/FILE_NAME]` section inside `[]` is optional.  It will run test in a single file if `args=PATH_TO/FILE_NAME` is given, otherwise, it will run through all tests in code base
 2. `make coverage` It will provide you code coverage for entire code base
 
 
