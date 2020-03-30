@@ -69,3 +69,35 @@ And the reason I had chosen Python as my programming language is because:
 - Python provide lots flexibility to write codes (single responsibility, object oriented design, etc)
 - The requirement was asking to build an application runnable with Docker command
 - I know Python better than other languages 
+
+
+### **Testing Methodology questions**
+
+> When is it appropriate to use automated testing? 
+
+- Manually repeat tests take time
+- Avoid human error during repeat tests
+- Provide fast result
+- Make sure PR is stable before code review
+- And validation application persist expected behaviors
+
+> When is it appropriate to use manual testing?
+
+- Validate new implementation fits business requirement
+- Uncover edge cases
+- Make sure implementation works well with other part of system (ie. front end)
+- And a good way to validate PR
+
+> What factors do you think about as you decide where to focus testing efforts? 
+
+I am a big fan of testing, I believe having too many tests is better than not having enough tests.  I like to set up unit and integration tests from individual methods, method interactions, and all the way to workflow.   It can provide me the confidence to ensure the application does what intended.
+
+In addition, I also like to provide unit tests to bugs that were discovered / fixed, so users won’t have to face the same problems again in future.    
+
+> How do you decide what not to test?
+
+- Class with no implementation (like abstract base class) 
+- Helper methods uses inside testing
+- 3rd party libraries (except the behavior application is currently using)
+- Configurations 
+- Standard libraries
