@@ -1,5 +1,8 @@
+import logging
 from abc import ABC, abstractmethod
 from string import ascii_lowercase
+
+LOGGER = logging.getLogger(__name__)
 
 
 class BaseHashCoefficient(ABC):  # pragma: no cover
@@ -23,7 +26,9 @@ class AlphabetIndexCoefficient(BaseHashCoefficient):
 
 
 def hash_first_character_from_word(algorithm: BaseHashCoefficient, word: str) -> int:
+    LOGGER.info(f"Hashing first character for `{word}`")
     if not word:
+        LOGGER.warning("Skip hashing for `None`")
         return None
 
     first_character = word[0].lower()

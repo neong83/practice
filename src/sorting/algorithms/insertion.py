@@ -1,6 +1,12 @@
+import logging
+
+LOGGER = logging.getLogger(__name__)
+
+
 def get_insert_position_form_sorted_array(
     array, new_word, accident: bool = False
 ) -> int:
+    LOGGER.info(f"Seeking insert position for word `{new_word}`")
     if not array:
         return 0
 
