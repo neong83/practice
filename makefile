@@ -12,4 +12,4 @@ test:
 	docker-compose run --rm app pytest tests/${args}
 
 coverage:
-	docker-compose run --rm app pytest --cov=. tests/
+	docker-compose run --rm app pytest --cov-report term-missing --cov=. tests/

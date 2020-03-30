@@ -1,6 +1,7 @@
 import logging
 
 import settings
+
 from file_io.exceptions import FileExtensionNotFoundException
 from file_io.models import FileType
 
@@ -25,9 +26,9 @@ def csv_formatter(contents):
 
 def write_to_file(file_name: str, contents):
     file_full_path = settings.CSV_DIR + file_name
-    LOGGER.info(f"Adding new contents {file_full_path}")
+    LOGGER.info(f"Adding new contents to {file_full_path}")
 
     content_formatter = get_content_formatter(file_name)
     with open(file_full_path, "a") as output_file:
-        output_file.write(content_formatter(contents))
+        output_file.write(content_formatter(contents) + "\n")
         output_file.close()

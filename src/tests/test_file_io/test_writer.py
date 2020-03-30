@@ -1,8 +1,9 @@
 from unittest.mock import mock_open, patch
 
+from settings import CSV_DIR
+
 from file_io.exceptions import FileExtensionNotFoundException
 from file_io.writer import csv_formatter, get_content_formatter, write_to_file
-from settings import CSV_DIR
 from tests.base import TestCase
 
 
