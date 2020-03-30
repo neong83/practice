@@ -57,3 +57,15 @@ Cons:
 - It’s does not persist data
 - Docker is target for server applications
 - You need to build container to read in secret rather than create image with embedded secret
+
+> How do you choose which language to use for a given task? How did you choose the language for the programming exercise above?
+
+I will determine the language basis on requirements, running platform, language adoption rate, and if it is an existing project within the company.  As switching from one language to another requires total rewriting, it takes time and investment for the company to move it over.  Thus, there are not too many options to choose what language to use for a given task.  It usually requires the developer to quickly learn the new language and start providing business value as a result.
+
+And the reason I had chosen Python as my programming language is because:
+- This is a new project
+- Python is the language the team is using for this position I am applying
+- Python can written as small script to handle business needs
+- Python provide lots flexibility to write codes (single responsibility, object oriented design, etc)
+- The requirement was asking to build an application runnable with Docker command
+- I know Python better than other languages 
