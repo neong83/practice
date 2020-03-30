@@ -1,7 +1,7 @@
 # Question & Answer
 
 <br/><br/>
-###  **Gherkin Questions**
+##  **Gherkin Questions**
 > Why Gherkin tests in `tests/features/sort_strings_in_descending_alphabet_order.feature` might be helpful in future?
 
 One of the best features from Gherkin is the ability to directly convert user stories into executable tests.  They are readable to both developers and project managers.  
@@ -15,7 +15,7 @@ For example, readers can fully understand this project will only accept English 
 Thus, having Gherkin tests in a project is really useful.
 
 <br/><br/>
-### **Tool questions**
+## **Tool questions**
 > In your opinion, what’s helpful about version control systems? What’s annoying about them?
 
 Pros:
@@ -74,7 +74,7 @@ And the reason I had chosen Python as my programming language is because:
 
 
 <br/><br/>
-### **Testing Methodology questions**
+## **Testing Methodology questions**
 
 > When is it appropriate to use automated testing? 
 
