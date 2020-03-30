@@ -1,5 +1,6 @@
 # Question & Answer
 
+<br/><br/>
 ###  **Gherkin Questions**
 > Why Gherkin tests in `tests/features/sort_strings_in_descending_alphabet_order.feature` might be helpful in future?
 
@@ -13,7 +14,7 @@ For example, readers can fully understand this project will only accept English 
 
 Thus, having Gherkin tests in a project is really useful.
 
-
+<br/><br/>
 ### **Tool questions**
 > In your opinion, what’s helpful about version control systems? What’s annoying about them?
 
@@ -38,7 +39,7 @@ Cons:
 - It will become a disaster if developer does not familiar with GitHub flow
 - Commits are not allow to remove from upstream, unless remove remote branch (must be super careful)
 
-
+<br/><br/>
 > What are some pros and cons of using Docker to develop, test, and deploy software?
 
 Pros:
@@ -58,6 +59,7 @@ Cons:
 - Docker is target for server applications
 - You need to build container to read in secret rather than create image with embedded secret
 
+<br/><br/>
 > How do you choose which language to use for a given task? How did you choose the language for the programming exercise above?
 
 I will determine the language basis on requirements, running platform, language adoption rate, and if it is an existing project within the company.  As switching from one language to another requires total rewriting, it takes time and investment for the company to move it over.  Thus, there are not too many options to choose what language to use for a given task.  It usually requires the developer to quickly learn the new language and start providing business value as a result.
@@ -71,6 +73,7 @@ And the reason I had chosen Python as my programming language is because:
 - I know Python better than other languages 
 
 
+<br/><br/>
 ### **Testing Methodology questions**
 
 > When is it appropriate to use automated testing? 
@@ -81,6 +84,7 @@ And the reason I had chosen Python as my programming language is because:
 - Make sure PR is stable before code review
 - And validation application persist expected behaviors
 
+<br/><br/>
 > When is it appropriate to use manual testing?
 
 - Validate new implementation fits business requirement
@@ -88,12 +92,14 @@ And the reason I had chosen Python as my programming language is because:
 - Make sure implementation works well with other part of system (ie. front end)
 - And a good way to validate PR
 
+<br/><br/>
 > What factors do you think about as you decide where to focus testing efforts? 
 
 I am a big fan of testing, I believe having too many tests is better than not having enough tests.  I like to set up unit and integration tests from individual methods, method interactions, and all the way to workflow.   It can provide me the confidence to ensure the application does what intended.
 
 In addition, I also like to provide unit tests to bugs that were discovered / fixed, so users won’t have to face the same problems again in future.    
 
+<br/><br/>
 > How do you decide what not to test?
 
 - Class with no implementation (like abstract base class) 
