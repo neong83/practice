@@ -95,7 +95,7 @@ And the reason I had chosen Python as my programming language is because:
 <br/><br/>
 > What factors do you think about as you decide where to focus testing efforts? 
 
-I am a big fan of testing, I believe having too many tests is better than not having enough tests.  I like to set up unit and integration tests from individual methods, method interactions, and all the way to workflow.   It can provide me the confidence to ensure the application does what intended.
+I am a big fan of testing, I believe having too many tests is better than not having enough tests.  I like to set up unit and integration tests from models, individual methods, method interactions, and all the way to workflow.   It can provide me the confidence to ensure the application does what intended.
 
 In addition, I also like to provide unit tests to bugs that were discovered / fixed, so users won’t have to face the same problems again in future.    
 
