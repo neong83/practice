@@ -35,11 +35,14 @@ class DescendingHashList(BaseStructure):
 
     def add(self, value: str):
         LOGGER.info(f"Adding `{value}` to bucket")
+
+        if value:
+            value = value.strip()
+
         if not value or not self.is_ascii_letters(value):
             LOGGER.warning(f"Found none ASCII letter(s) in {value}, skip insert")
             return
 
-        value = value.strip()
         hash_value = hash_first_character_from_word(self.hash_algorithm, value)
         position = get_insert_position_form_sorted_array(
             self.buckets[hash_value], value, self.__accident
