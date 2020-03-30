@@ -40,11 +40,11 @@ class DescendingHashListTestCase(TestCase):
             self.hashed_list.add(None)
         self.assertRegexIn("Found none ASCII letter", cm.output)
 
-    def test_to_list(self):
+    def test_list(self):
         BUCKET_VALUE_SET_ONE = ["ab", "ac"]
         BUCKET_VALUE_SET_TWO = ["ba", "bb"]
         self.hashed_list.buckets[0] = BUCKET_VALUE_SET_ONE
         self.hashed_list.buckets[3] = BUCKET_VALUE_SET_TWO
         self.assertEqual(
-            self.hashed_list.to_list(), BUCKET_VALUE_SET_ONE + BUCKET_VALUE_SET_TWO
+            self.hashed_list.list(), BUCKET_VALUE_SET_ONE + BUCKET_VALUE_SET_TWO
         )

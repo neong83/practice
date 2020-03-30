@@ -16,7 +16,8 @@ class BaseStructure(ABC):  # pragma: no cover
     def add(self, value):
         pass
 
-    def to_list(self):
+    @abstractmethod
+    def list(self):
         pass
 
 
@@ -45,7 +46,7 @@ class DescendingHashList(BaseStructure):
         )
         self.buckets[hash_value].insert(position, value)
 
-    def to_list(self):
+    def list(self):
         result = []
         for bucket in self.buckets:
             result += bucket
