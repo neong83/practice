@@ -35,6 +35,12 @@ class DescendingHashListTestCase(TestCase):
             self.hashed_list.buckets[bucket_index], ["ad", "ac", "ab", "aa"]
         )
 
+    def test_add_with_leading_trailing_space_word(self):
+        TEST_WORD = "  Aab   "
+        bucket_index = self.get_charachter_index("a")
+        self.hashed_list.add(TEST_WORD)
+        self.assertEqual(self.hashed_list.buckets[bucket_index], [TEST_WORD.strip()])
+
     def test_add_with_None(self):
         with self.assertLogs(level="WARNING") as cm:
             self.hashed_list.add(None)
