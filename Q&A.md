@@ -37,3 +37,23 @@ Cons:
 - A new JIRA ticket is required when unrelated (to current branch) bug is found
 - It will become a disaster if developer does not familiar with GitHub flow
 - Commits are not allow to remove from upstream, unless remove remote branch (must be super careful)
+
+
+> What are some pros and cons of using Docker to develop, test, and deploy software?
+
+Pros:
+- It’s light-weight
+- It allows developer to create base image with all the 3rd library, configurations, etc for application to run on
+- It allows developer only need to set it up once and it can be share with others
+- It allows developer to quickly rollback (rebuild image) when their changes had broken the container
+- It makes switching / deploy to another environment easy
+- Developer does not have to worry about unexpected behavior due to environment changes (ie. from Dev to Stage, or works on my machine situation)
+- New deployment will only takes seconds to start up
+- Each container can force on only one subject that matters
+- Developer can create cluster to allow contains work together
+
+Cons:
+- You need to know what you are doing
+- It’s does not persist data
+- Docker is target for server applications
+- You need to build container to read in secret rather than create image with embedded secret
