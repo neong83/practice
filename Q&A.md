@@ -1,7 +1,7 @@
 # Question & Answer
 
 ###  **Gherkin Questions**
-#### _Why Gherkin tests in `tests/features/sort_strings_in_descending_alphabet_order.feature` might be helpful in future?_
+> Why Gherkin tests in `tests/features/sort_strings_in_descending_alphabet_order.feature` might be helpful in future?
 
 One of the best features from Gherkin is the ability to directly convert user stories into executable tests.  They are readable to both developers and project managers.  
 
