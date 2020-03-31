@@ -81,6 +81,7 @@ And the reason I had chosen Python as my programming language is because:
 - Manually repeat tests take time
 - Avoid human error during repeat tests
 - Provide fast result
+- Load test
 - Make sure PR is stable before code review
 - And validation application persist expected behaviors
 
